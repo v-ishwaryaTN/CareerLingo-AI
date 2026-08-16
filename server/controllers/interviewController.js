@@ -1,4 +1,4 @@
-const { askClaude } = require("../utils/claude");
+const { askClaude } = require("../utils/askClaude");
 const InterviewAnswer = require("../models/InterviewAnswer");
 const { LANGUAGE_NAMES } = require("./translateController");
 
