@@ -1,4 +1,4 @@
-const API_BASE_URL = `${process.env.REACT_APP_API_URL || 'http://localhost:5000'}`.replace(/\/$/, '') + '/api';
+const API_BASE_URL = `${process.env.REACT_APP_API_URL || 'https://careerlingo-ai-server.onrender.com/'}`.replace(/\/$/, '') + '/api';
 // ---- Courses ----
 export const getCourses = async () => {
   try {
