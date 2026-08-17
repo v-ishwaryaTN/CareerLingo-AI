@@ -1,0 +1,152 @@
+.jobs-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 50px 24px 80px;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #f6f7fb 0%, #eef0fa 100%);
+  min-height: 100vh;
+}
+
+.jobs-page h1 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #14142b;
+  margin-bottom: 6px;
+  letter-spacing: -0.8px;
+}
+
+.jobs-subtitle {
+  color: #7a7a8c;
+  font-size: 15px;
+  margin-bottom: 36px;
+}
+
+.job-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 26px;
+  margin-bottom: 20px;
+  border: 1px solid #edeef7;
+  box-shadow: 0 3px 10px rgba(20, 20, 43, 0.05);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: cardIn 0.4s ease both;
+}
+
+.job-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #4338ca, #6d5ff0);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(20, 20, 43, 0.1);
+  border-color: #dcdcf5;
+}
+
+.job-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.job-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.job-icon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #eef0ff, #e2e5ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: #4338ca;
+}
+
+.job-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #14142b;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.job-meta {
+  font-size: 14px;
+  color: #83839a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.job-meta .dot {
+  color: #cfcfe6;
+}
+
+.job-tag {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 20px;
+  background: #eef7f0;
+  color: #1b8a4c;
+  letter-spacing: 0.3px;
+}
+
+.apply-btn {
+  padding: 11px 24px;
+  background: linear-gradient(135deg, #1a1a2e, #302e5c);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(26, 26, 46, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.apply-btn:hover {
+  background: linear-gradient(135deg, #4338ca, #6d5ff0);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(67, 56, 202, 0.32);
+}
+
+.apply-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.apply-btn:disabled {
+  background: #c3c3d1;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.apply-btn.applied {
+  background: #eef7f0;
+  color: #1b8a4c;
+  box-shadow: none;
+  cursor: default;
+}
